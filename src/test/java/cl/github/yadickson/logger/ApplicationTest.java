@@ -25,6 +25,11 @@ public class ApplicationTest {
     @Autowired
     Application application;
 
+    @Test(expected = Test.None.class)
+    public void testApplication() {
+        Application.main(new String[]{});
+    }
+
     @Test
     public void testAnnotations() {
         Assert.assertTrue(application.getClass().isAnnotationPresent(SpringBootApplication.class));
