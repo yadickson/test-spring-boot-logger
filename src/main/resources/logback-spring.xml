@@ -7,7 +7,7 @@
 
     <variable name="APP_LOG_LEVEL" value="${LOG_LEVEL:-DEBUG}" />
     
-    <property name="APP_LOG_DIR" value="${LOG_DIR:-${java.io.tmpdir:-/tmp}/${APP_NAME}}" />
+    <property name="APP_LOG_DIR" value="${LOG_DIR:-${java.io.tmpdir:-/tmp}/logs/${APP_NAME}}" />
     
     <appender name="FILE-ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${APP_LOG_DIR}/${APP_NAME}.json</file>
